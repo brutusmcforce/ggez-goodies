@@ -200,7 +200,7 @@ impl Map {
             ctx,
             graphics::DrawMode::fill(),
             graphics::Rect::new(0.0, 0.0, 100.0, 100.0),
-            graphics::WHITE,
+            graphics::Color::WHITE,
         )
         .unwrap();
         let mut s = Self {
@@ -268,7 +268,7 @@ impl Map {
             ctx,
             graphics::DrawMode::fill(),
             graphics::Rect::new(0.0, 0.0, 100.0, 100.0),
-            graphics::WHITE,
+            graphics::Color::WHITE,
         )
         .unwrap();
 
@@ -315,22 +315,22 @@ impl Map {
                                 graphics::Vertex {
                                     pos: [dest_pt.x, dest_pt.y],
                                     uv: [src_rect.x, src_rect.y],
-                                    color: graphics::WHITE.into(),
+                                    color: graphics::Color::WHITE.into(),
                                 },
                                 graphics::Vertex {
                                     pos: [dest_pt.x + self.tile_width, dest_pt.y],
                                     uv: [src_rect.x + src_rect.w, src_rect.y],
-                                    color: graphics::WHITE.into(),
+                                    color: graphics::Color::WHITE.into(),
                                 },
                                 graphics::Vertex {
                                     pos: [dest_pt.x + self.tile_width, dest_pt.y + self.tile_height],
                                     uv: [src_rect.x + src_rect.w, src_rect.y + src_rect.h],
-                                    color: graphics::WHITE.into(),
+                                    color: graphics::Color::WHITE.into(),
                                 },
                                 graphics::Vertex {
                                     pos: [dest_pt.x, dest_pt.y + self.tile_height],
                                     uv: [src_rect.x, src_rect.y + src_rect.h],
-                                    color: graphics::WHITE.into(),
+                                    color: graphics::Color::WHITE.into(),
                                 },
                             ];
                             if dflip { //Swap uv coordinates of diagonally opposite corners to rotate texture.

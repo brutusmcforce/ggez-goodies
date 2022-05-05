@@ -153,7 +153,7 @@ impl Particle for DefaultParticle {
         Self {
             pos: euclid::point2(0.0, 0.0),
             vel: euclid::vec2(10.0, 10.0),
-            color: graphics::WHITE,
+            color: graphics::Color::WHITE,
             size: 1.0,
             angle: 0.0,
             ang_vel: 0.0,

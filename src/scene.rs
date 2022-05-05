@@ -20,8 +20,8 @@ use ggez;
 /// popping one or replacing the current scene (pop and then push).
 pub enum SceneSwitch<C, Ev> {
     None,
-    Push(Box<Scene<C, Ev>>),
-    Replace(Box<Scene<C, Ev>>),
+    Push(Box<dyn Scene<C, Ev>>),
+    Replace(Box<dyn Scene<C, Ev>>),
     Pop,
 }
 
